@@ -1,6 +1,6 @@
 # Bloxflip-auto-rain-joiner
 
-## Wocky v1.0:
+## ARJ v1.0:
 - Bug Fixed
 
 
@@ -51,7 +51,7 @@ Example: If you set it to 1000 it will only notify you of rains that are bigger 
 How often you want it to check if there is a rain currently happening (in seconds)
 
 ⚠️ WARNING ⚠️
-- Recommended to not go below 15 seconds because you dont want your potato PC to crash
+- Recommended to not go below 20 seconds because you dont want your potato PC to crash
 - Experiment with this feature, see what works for you
 
 ### mouse_movement:
