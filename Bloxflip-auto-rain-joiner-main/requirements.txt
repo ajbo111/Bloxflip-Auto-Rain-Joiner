@@ -4,3 +4,5 @@ cloudscraper
 win10toast
 pillow
 opencv-python
+colorama
+times
