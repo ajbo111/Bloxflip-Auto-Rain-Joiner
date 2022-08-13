@@ -2,7 +2,7 @@ import json, os, time, cloudscraper, webbrowser, pyautogui, random
 from win10toast import ToastNotifier
 from discord_webhook import DiscordWebhook, DiscordEmbed
 
-os.system(f'title Rain Joiner By: Ajbo111 ^')
+os.system(f'title Rain Joiner By: Carter ^')
 
 with open("config.json", "r") as config:
   config = json.load(config)
@@ -26,15 +26,15 @@ toast = ToastNotifier()
 try:
   get = scraper.get("https://rest-bf.blox.land/user", headers = {"origin": "https://bloxflip.com", "x-auth-token": auth})
   info = get.json()['user']
-  print(f"Logged in as {info['robloxUsername']}\nCurrent balance: {info['wallet']}\n\n")
+  print(f"Currently Logged in as {info['robloxUsername']}\nCurrent balance: {info['wallet']}\n\n")
 except:
-  input("Invalid Auth Token\nPress enter to exit.")
+  input("The Token You Provided Is Invalid\nPlease press enter to exit.")
   quit()
 if webhook_enable == "True":
     thumburl = (f"https://www.roblox.com/headshot-thumbnail/image?userId={info['robloxId']}&height=50&width=50&format=png")
-    embed = DiscordEmbed(title=f"Logged in!", url="https://bloxflip.com", color=0x37bf19)
-    embed.add_embed_field(name="Logged into bloxflip as", value=f"{info['robloxUsername']}")
-    embed.add_embed_field(name="Current balance", value=f"{info['wallet']}")
+    embed = DiscordEmbed(title=f"I'm in!", url="https://bloxflip.com", color=0x37bf19)
+    embed.add_embed_field(name="Logged on bloxflip as", value=f"{info['robloxUsername']}")
+    embed.add_embed_field(name="Your Current Robux", value=f"{info['wallet']}")
     embed.set_timestamp()
     embed.set_thumbnail(url=thumburl)
     webhook.add_embed(embed)
